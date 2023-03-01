@@ -2,5 +2,6 @@ coverage
 node_modules
 .vscode-test/
 .history
+.next
 *.vsix
 **/.DS_Store
