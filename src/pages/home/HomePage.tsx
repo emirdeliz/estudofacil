@@ -2,19 +2,19 @@ import { Banner, Card } from '@/components';
 import { Flex, Row, Col } from '@/framework';
 import Image from 'next/image';
 import { t } from '@/i18n';
-import S from './HomePage.style';
+import AstronautStyle from './HomePage.style';
 
 const HomePage = () => {
   return (
     <Flex.Col w-full h-full>
       <Banner />
-      <S.Astronaut>
+      <AstronautStyle>
         <Image
           src="/astronauta.png"
           alt="Astronauta"
           fill
         />
-      </S.Astronaut>
+      </AstronautStyle>
       <Row mt-4>
         <Col.C4 tablet="4" mob-l="12">
           <Card

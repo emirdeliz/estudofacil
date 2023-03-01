@@ -10,6 +10,4 @@ const Astronaut = styled.div`
   }
 `;
 
-const S = { Astronaut };
-
-export default S;
+export default Astronaut;
