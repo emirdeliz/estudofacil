@@ -8,7 +8,7 @@ import { ESThemeLineHeight } from './line-height';
 import { ESThemeOpacity } from './opacity';
 import { ESThemeRadius } from './radius';
 import { ESThemeSpace } from './space';
-import { ESThemeZIndex } from './zIndex';
+import { ESThemeZIndex } from './z-index';
 
 export const ESTheme = {
   color: ESThemeColorDark,
@@ -45,7 +45,7 @@ export * from './mixins';
 export * from './opacity';
 export * from './radius';
 export * from './theme';
-export * from './zIndex';
+export * from './z-index';
 export * from './margin';
 export * from './padding';
 export * from './size';

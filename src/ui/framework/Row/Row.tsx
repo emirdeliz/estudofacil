@@ -10,7 +10,7 @@ export interface RowProps extends ESThemeMarginProps, ESThemePaddingProps {
 export const Row = memo(({ children, ...props }: RowProps) => {
   return (
     <S.Row {...props}>
-      <Flex.Row alignInitial wFull wrap>
+      <Flex.Row align-initial w-full wrap>
         {children}
       </Flex.Row>
     </S.Row>

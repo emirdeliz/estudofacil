@@ -1,6 +1,6 @@
+import { ESThemeZIndex } from '@/theme';
 import React, { memo, ReactNode } from 'react';
 import { createPortal } from 'react-dom';
-import { ESThemeZIndex } from 'theme/zIndex';
 import * as S from './Overlay.style';
 
 export interface OverlayProps {

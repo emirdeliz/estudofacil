@@ -18,10 +18,10 @@ export const FormGroup = ({
   return (
     <Flex>
       {label && (
-        <Flex justifyCenter alignEnd>
+        <Flex justify-center align-end>
           <LabelForm>{label}</LabelForm>
           {optional && (
-            <Title.Fs1 mb1 ml1>
+            <Title.Fs1 mb-1 ml-1>
               optional
             </Title.Fs1>
           )}

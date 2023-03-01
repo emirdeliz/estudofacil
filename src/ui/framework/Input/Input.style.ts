@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 export enum InputType {
   Text = 'text',
@@ -6,7 +6,8 @@ export enum InputType {
 }
 
 const InputBaseStyle = css`
-  padding: ${({ theme }) => [theme.padding.Sp2, theme.padding.Sp3].join(' ')};
+  padding: ${({ theme }) =>
+    [theme.padding['Sp-2'], theme.padding['Sp-3']].join(' ')};
   font-size: ${({ theme }) => theme.fontSize.Fs2};
   width: 100%;
   outline: none;
