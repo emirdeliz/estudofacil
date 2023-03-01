@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Astronaut = styled.div`
+const Astronaut = styled.div`
   width: 100%;
 
   img {
@@ -9,3 +9,7 @@ export const Astronaut = styled.div`
     height: auto !important;
   }
 `;
+
+const S = { Astronaut };
+
+export default S;

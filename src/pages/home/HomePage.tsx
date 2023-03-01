@@ -2,9 +2,9 @@ import { Banner, Card } from '@/components';
 import { Flex, Row, Col } from '@/framework';
 import Image from 'next/image';
 import { t } from '@/i18n';
-import * as S from './HomePage.style';
+import S from './HomePage.style';
 
-export const HomePage = () => {
+const HomePage = () => {
   return (
     <Flex.Col w-full h-full>
       <Banner />
@@ -41,3 +41,5 @@ export const HomePage = () => {
     </Flex.Col>
   );
 };
+
+export default HomePage;
