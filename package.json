@@ -1,0 +1,53 @@
+{
+  "name": "estudofacil",
+  "version": "1.0.0",
+  "description": "Estudo fácil",
+  "main": "index.js",
+  "author": "Emir Marques - <emirdeliz@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"prettier:format": "prettier --write ./src"
+	},
+  "eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		],
+		"overrides": [
+			{
+				"files": [
+					"**/*.stories.*"
+				],
+				"rules": {
+					"import/no-anonymous-default-export": "off"
+				}
+			}
+		]
+	},
+	"dependencies": {
+		"@next/font": "^13.0.2",
+		"next": "13.0.2",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"styled-components": "^5.3.6",
+		"styled-reset": "^4.4.5"
+	},
+	"devDependencies": {
+		"@testing-library/jest-dom": "^5.16.5",
+		"@testing-library/react": "^13.4.0",
+		"@types/jest": "^29.2.2",
+		"@types/node": "18.11.9",
+		"@types/react": "18.0.25",
+		"@types/react-dom": "18.0.8",
+		"@types/styled-components": "^5.1.26",
+		"eslint": "8.27.0",
+		"eslint-config-next": "13.0.2",
+		"jest-styled-components": "^7.1.1",
+		"prettier": "^2.7.1",
+		"typescript": "4.8.4"
+	}
+}
