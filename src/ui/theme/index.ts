@@ -34,6 +34,7 @@ export {
   ESThemeDisplay,
   ESThemeZIndex,
   ESThemeSize,
+  ESThemeSpace,
 };
 
 export * from './color';

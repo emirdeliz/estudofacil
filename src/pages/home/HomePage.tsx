@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { t } from '@/i18n';
 import AstronautStyle from './HomePage.style';
 
+// bta 16
+
 const HomePage = () => {
   return (
     <Flex.Col w-full h-full>
