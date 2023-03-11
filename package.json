@@ -12,7 +12,8 @@
 		"lint": "next lint",
 		"prettier:format": "prettier --write ./src",
 		"test": "jest --watch",
-		"test:ci": "jest --ci"
+		"test:ci": "jest --ci",
+		"jest:clear:cache": "jest --clearCache"
 	},
 	"eslintConfig": {
 		"extends": [

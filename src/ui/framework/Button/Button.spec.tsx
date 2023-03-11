@@ -1,4 +1,4 @@
-import { ESThemeColorDark, ESThemeOpacity, ESThemeSpace } from '@/theme';
+import { ESThemeOpacity, ESThemeSpace } from '@/theme';
 import { render, fireEvent } from 'test/TestUtils';
 import { Button } from './Button';
 
@@ -8,14 +8,6 @@ describe('Button component test', () => {
     expect(typeof buttonNode.firstChild).toEqual(typeof (<button />));
   });
 
-  // it('Have button info', async () => {
-  //   const { container: buttonNode } = render(<Button info />);
-  //   expect(buttonNode.firstChild).toHaveStyleRule(
-  //     'background-color',
-  //     ESThemeColorDark.P1
-  //   );
-  // });
-
   it('Have button not clickable', async () => {
     const { container: buttonNode } = render(<Button clickable={false} />);
     expect(buttonNode.firstChild).toHaveStyleRule(
@@ -23,19 +15,6 @@ describe('Button component test', () => {
       String(ESThemeOpacity.Disable)
     );
     expect(buttonNode.firstChild).toHaveStyleRule('cursor', 'not-allowed');
-  });
-
-  it('Have button outlined', async () => {
-    const { container: buttonNode } = render(<Button outlined />);
-    // expect(buttonNode.firstChild).toHaveStyleRule(
-    //   'background-color',
-    //   ESThemeColorDark.P1
-    // );
-    // expect(buttonNode.firstChild).toHaveStyleRule(
-    //   'border',
-    //   `solid 1px ${ESThemeColorDark.P1}`
-    // );
-    // expect(buttonNode.firstChild).toHaveStyleRule('color', ESThemeColorDark.P1);
   });
 
   it('Have button sm', async () => {

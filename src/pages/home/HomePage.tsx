@@ -4,18 +4,12 @@ import Image from 'next/image';
 import { t } from '@/i18n';
 import AstronautStyle from './HomePage.style';
 
-// bta 16
-
 const HomePage = () => {
   return (
     <Flex.Col w-full h-full>
       <Banner />
       <AstronautStyle>
-        <Image
-          src="/astronauta.png"
-          alt="Astronauta"
-          fill
-        />
+        <Image src="/astronauta.png" alt="Astronauta" fill />
       </AstronautStyle>
       <Row mt-4>
         <Col.C4 tablet="4" mob-l="12">

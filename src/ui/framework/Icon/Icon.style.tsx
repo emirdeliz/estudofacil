@@ -1,6 +1,11 @@
-import { ESThemeSizeProps, getThemeColor, getThemeMarginOnly, getThemePaddingOnly } from "@/theme";
-import { capitalizeFirstLetter } from "@/utils";
-import styled, { DefaultTheme } from "styled-components";
+import {
+  ESThemeSizeProps,
+  getThemeColor,
+  getThemeMarginOnly,
+  getThemePaddingOnly,
+} from '@/theme';
+import { capitalizeFirstLetter } from '@/utils';
+import styled, { DefaultTheme } from 'styled-components';
 
 export enum ESThemeIconSize {
   'Sz-0' = '10px',
@@ -33,12 +38,9 @@ const getThemeSize = ({
 
 export const Icon = styled.div`
   ${({ theme, ...props }) => {
-  const fill = getThemeColor({ theme, ...props });
-  const size = getThemeSize({ theme, ...props });
-
-  console.log({size})
-
-  return `
+    const fill = getThemeColor({ theme, ...props });
+    const size = getThemeSize({ theme, ...props });
+    return `
       svg {
         width: ${size};
         height: ${size};

@@ -72,8 +72,11 @@ export const Container = styled.div<FlexProps & { flexWrap: number }>`
 			${padding}
 		`;
   }}
-  ${({ 'h-full': hFull, 'w-full': wFull }) => `
-		${wFull ? 'width: 100%' : ''};
-		${hFull ? 'height: 100%' : ''};
-	`}
+
+  width: ${({ 'w-full': wFull }) => `
+		${wFull ? '100%' : 'auto'};
+	`};
+  height: ${({ 'h-full': hFull }) => `
+		${hFull ? '100%' : 'auto'};
+	`};
 `;

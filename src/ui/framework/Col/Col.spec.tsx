@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render } from 'test/TestUtils';
 import { Col } from './Col';
 
 const ColSimple = () => (
@@ -15,6 +15,7 @@ const ColSimple = () => (
     <Col.C10 />
     <Col.C11 />
     <Col.C12 />
+    <Col.Auto />
   </>
 );
 
@@ -25,9 +26,9 @@ describe('Col component test', () => {
   });
 
   it('Have Col c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, auto', async () => {
-    const { container: colNode } = render(<ColSimple />);
-    const cols = (colNode.firstChild?.childNodes ||
-      []) as Array<HTMLDivElement>;
+    const { baseElement: colNode } = render(<ColSimple />);
+    const cols = (colNode.children[0].children ||
+      []) as HTMLCollectionOf<HTMLDivElement>;
 
     expect(cols[0]).toHaveStyleRule('flex', '0 0 8.333333%');
     expect(cols[1]).toHaveStyleRule('flex', '0 0 16.666667%');
