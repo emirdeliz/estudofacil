@@ -1,7 +1,7 @@
 import { Banner, Card } from '@/components';
-import { Flex, Row, Col } from '@/framework';
+import { Flex, Row, Col } from 'ui/framework2';
 import Image from 'next/image';
-import { t } from '@/i18n';
+import { t } from 'ui/system/i18n';
 import AstronautStyle from './HomePage.style';
 
 const HomePage = () => {

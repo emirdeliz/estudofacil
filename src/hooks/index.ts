@@ -1,1 +1,2 @@
-export * from './window/useWindow';
+export * from './window';
+export * from './event';

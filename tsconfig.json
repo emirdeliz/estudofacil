@@ -6,37 +6,55 @@
       "dom.iterable",
       "esnext"
     ],
+    "typeRoots": ["./@types", "./node_modules/@types"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
     "noEmit": true,
+    "noImplicitAny": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "incremental": true,
     "paths": {
-      "@/framework": [
-        "ui/framework"
+      "@/atoms": [
+        "src/ui/atoms/"
+      ],
+      "@/molecules": [
+        "src/ui/molecules"
+      ],
+      "@/organisms": [
+        "src/ui/organisms"
       ],
       "@/components": [
-        "ui/components"
+        "src/ui/components"
       ],
       "@/theme": [
-        "ui/theme"
+        "src/ui/system/theme"
       ],
       "@/i18n": [
-        "ui/i18n"
+        "src/ui/system/i18n"
+      ],
+      "@/stories": [
+        "src/ui/stories"
       ],
       "@/hooks": [
-        "hooks"
+        "src/hooks"
+      ],
+      "@/helpers": [
+        "src/helpers"
+      ],
+      "@/types": [
+        "src/types"
       ],
       "@/utils": [
-        "utils"
+        "src/utils"
       ],
       "@/test": [
         "test"

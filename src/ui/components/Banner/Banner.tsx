@@ -1,8 +1,8 @@
 import { memo } from 'react';
-import { Button, Flex, Icon } from '@/framework';
+import { Button, Flex, Icon } from '@/ui/framework2';
 import { Logo } from '../Logo/Logo';
 import * as S from './Banner.style';
-import { t } from '@/i18n';
+import { t } from '@/ui/system/i18n';
 
 export const Banner = memo(() => {
   return (
