@@ -10,9 +10,9 @@ import React, {
 import { withFloat } from '@/atoms';
 import * as S from './Tooltip.style';
 import { GenericObject } from '@/types';
-import { ThemeOptions } from '@/theme';
+import { AppThemeOptions } from '@/theme';
 
-export interface TooltipProps extends ThemeOptions {
+export interface TooltipProps extends AppThemeOptions {
   invisible?: boolean;
   width?: number;
   hoverable?: boolean;

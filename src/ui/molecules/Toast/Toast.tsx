@@ -1,5 +1,5 @@
 import React, { memo, ReactNode } from 'react';
-import { ThemeOptions } from '@/theme';
+import { AppThemeOptions } from '@/theme';
 import { Flex, Link, ProgressBar, Title } from '@/atoms';
 import {
   Context as ToastContext,
@@ -18,7 +18,7 @@ export interface ToastProps {
   topOffset?: number;
 }
 
-export interface ToastItemProps extends ThemeOptions {
+export interface ToastItemProps extends AppThemeOptions {
   title?: string;
   message?: string;
   id?: string;

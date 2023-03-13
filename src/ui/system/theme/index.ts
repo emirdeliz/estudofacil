@@ -1,14 +1,39 @@
+import { DefaultTheme } from 'styled-components';
+import { AppThemeColorDark } from './colors';
+import { Display } from './display';
+import { FontSize } from './font-size';
+import { FontWeight } from './font-weight';
+import { LineHeight } from './line-height';
+import { Opacity } from './opacity';
+import { Radius } from './radius';
+import { Padding } from './padding';
+import { Margin } from './margin';
+import { ZIndex } from './z-index';
+
+export const AppTheme = {
+  colors: AppThemeColorDark,
+  fontSize: FontSize,
+  fontWeight: FontWeight,
+  radius: Radius,
+  opacity: Opacity,
+  lineHeight: LineHeight,
+  display: Display,
+  zIndex: ZIndex,
+  margin: Margin,
+  padding: Padding,
+} as DefaultTheme;
+
 export * from './colors';
 export * from './display';
-export * from './fontSize';
-export * from './fontWeight';
+export * from './font-size';
+export * from './font-weight';
 export * from './mixins';
-export * from './lineHeight';
+export * from './line-height';
 export * from './margin';
 export * from './opacity';
 export * from './padding';
 export * from './radius';
 export * from './shadow';
 export * from './size';
-export * from './zIndex';
+export * from './z-index';
 export * from './theme';

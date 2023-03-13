@@ -25,11 +25,15 @@ export enum Colors {
   N4 = '#eeeeef',
   N5 = '#f9f9f9',
   N6 = '#ebf0f2',
-  
-  // New Theme Colors
-  B1 = '#03223B',
-  Y1 = '#FEC23C',
 }
+
+export const AppThemeColorLight = {
+  ...Colors,
+};
+
+export const AppThemeColorDark = {
+  ...Colors,
+};
 
 export interface ColorsProps {
   black?: boolean;
@@ -58,24 +62,21 @@ export interface ColorsProps {
   y1?: boolean;
 }
 
-export interface ThemeOptions {
+export interface AppThemeOptions {
   info?: boolean;
   success?: boolean;
   warn?: boolean;
   error?: boolean;
   default?: boolean;
   light?: boolean;
-  newThemeButtonDefault?: boolean;
-  newThemeButtonSecondary?: boolean;
-  newThemeButtonOutlined?: boolean;
 }
 
-export interface ThemeColor {
-  bg?: Colors;
-  bgHover?: Colors;
-  text?: Colors;
-  textLight?: Colors;
-  border?: Colors;
+export interface AppThemeColor {
+  bg?: string;
+  bgHover?: string;
+  text?: string;
+  textLight?: string;
+  border?: string;
 }
 
 export const getThemeColor = ({
@@ -152,18 +153,10 @@ export const getThemeColor = ({
   }
 };
 
-export const getThemeColorByOptions = (props?: ThemeOptions): ThemeColor => {
-  const {
-    info,
-    success,
-    warn,
-    error,
-    light,
-    default: def,
-    newThemeButtonDefault,
-    newThemeButtonSecondary,
-    newThemeButtonOutlined,
-  } = props || {};
+export const getThemeColorByOptions = (
+  props?: AppThemeOptions
+): AppThemeColor => {
+  const { info, success, warn, error, light, default: def } = props || {};
 
   switch (true) {
     case info:
@@ -201,24 +194,6 @@ export const getThemeColorByOptions = (props?: ThemeOptions): ThemeColor => {
         bg: Colors.N5,
         border: Colors.N5,
         text: Colors.Black,
-      };
-    case newThemeButtonDefault:
-      return {
-        bg: Colors.Y1,
-        border: Colors.Y1,
-        text: Colors.B1,
-      };
-    case newThemeButtonSecondary:
-      return {
-        bg: Colors.B1,
-        border: Colors.B1,
-        text: Colors.White,
-      };
-    case newThemeButtonOutlined:
-      return {
-        bg: Colors.B1,
-        border: Colors.Y1,
-        text: Colors.Y1,
       };
     default:
       return {

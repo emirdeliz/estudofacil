@@ -2,14 +2,14 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import { Toast, ToastProps, ToastProvider, useToast } from '@/molecules';
 import { Link } from '@/atoms';
-import { ThemeOptions } from '@/theme';
+import { AppThemeOptions } from '@/theme';
 
 export default {
   title: 'Components/Molecules/Toast',
   component: Toast,
 } as Meta;
 
-const Wrapper = (args: ToastProps & ThemeOptions) => {
+const Wrapper = (args: ToastProps & AppThemeOptions) => {
   const { showToast } = useToast();
   const showNewToast = () => {
     showToast({
@@ -35,7 +35,7 @@ const Wrapper = (args: ToastProps & ThemeOptions) => {
   );
 };
 
-const Template: Story<ToastProps & ThemeOptions> = (args) => {
+const Template: Story<ToastProps & AppThemeOptions> = (args) => {
   return (
     <ToastProvider>
       <Wrapper {...args} />

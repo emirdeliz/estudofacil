@@ -22,13 +22,13 @@ const Content = styled.div`
 const Template: Story<RowProps> = () => (
   <Container>
     <Row>
-      <Col c2>
+      <Col de="2">
         <Content>c2</Content>
       </Col>
-      <Col c3>
+      <Col de="3">
         <Content>c3</Content>
       </Col>
-      <Col c7>
+      <Col de="7">
         <Content>c7</Content>
       </Col>
     </Row>

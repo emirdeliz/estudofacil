@@ -1,7 +1,7 @@
 import { Banner, Card } from '@/components';
-import { Flex, Row, Col } from 'ui/framework2';
+import { Flex, Row, Col } from '@/atoms';
 import Image from 'next/image';
-import { t } from 'ui/system/i18n';
+import { t } from '@/i18n';
 import AstronautStyle from './HomePage.style';
 
 const HomePage = () => {
@@ -16,7 +16,6 @@ const HomePage = () => {
           <Card
             title={t('home-page-learn-to-learn')}
             subTitle={t('home-page-promote-autonomy')}
-            desktop
           />
         </Col.C4>
         <Col.C4 tablet="4" mob-l="12">

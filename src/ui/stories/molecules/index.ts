@@ -1,5 +1,6 @@
 export * from './Alert/Alert.stories';
 export * from './Calendar/Calendar.stories';
+export * from './Dropdown/Dropdown.stories';
 export * from './FormGroup/FormGroup.stories';
 export * from './LoaderComponent/LoaderComponent.stories';
 export * from './Modal/Modal.stories';

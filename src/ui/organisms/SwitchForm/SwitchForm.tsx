@@ -39,7 +39,9 @@ SwitchForm.Input = ({
 }: SwitchFormInputProps) => {
   return (
     <S.SwitchInput>
-      <SwitchForm {...props} row children={children} />
+      <SwitchForm {...props} row>
+        {children}
+      </SwitchForm>
       <Input
         {...props}
         fs2

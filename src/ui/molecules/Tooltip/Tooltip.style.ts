@@ -1,4 +1,4 @@
-import { getThemeColorByOptions, ThemeOptions } from '@/theme';
+import { getThemeColorByOptions, AppThemeOptions } from '@/theme';
 import styled, { css, keyframes } from 'styled-components';
 import { TooltipProps } from './Tooltip';
 
@@ -47,7 +47,7 @@ export const Container = styled.div<TooltipProps>`
         : theme.colors.P1};
 `;
 
-interface ArrowProps extends ThemeOptions {
+interface ArrowProps extends AppThemeOptions {
   top?: boolean;
   bottom?: boolean;
   left?: boolean;

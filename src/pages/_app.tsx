@@ -1,9 +1,9 @@
 import { useMemo, useState } from 'react';
-import { ESTheme, ESThemeColorDark, ESThemeColorLight } from 'ui/system/theme';
+import { AppTheme, AppThemeColorDark, AppThemeColorLight } from '@/theme';
 import { DefaultTheme, ThemeProvider } from 'styled-components';
 import type { AppProps } from 'next/app';
 import { Reset } from 'styled-reset';
-import { LoadingProvider } from 'ui/framework2';
+import { LoadingProvider } from '@/atoms';
 import GlobalStyle from './global.style';
 import './_app.css';
 
@@ -15,8 +15,8 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   const theme = useMemo<DefaultTheme>(() => {
     return {
-      ...ESTheme,
-      color: isDarkMode ? ESThemeColorDark : ESThemeColorLight,
+      ...AppTheme,
+      color: isDarkMode ? AppThemeColorDark : AppThemeColorLight,
     };
   }, [isDarkMode]);
 

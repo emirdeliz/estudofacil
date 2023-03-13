@@ -1,4 +1,4 @@
-import { getThemeColorByOptions, ThemeOptions } from '@/theme';
+import { getThemeColorByOptions, AppThemeOptions } from '@/theme';
 import styled from 'styled-components';
 import { Title } from '../../atoms/Title/Title.style';
 
@@ -63,7 +63,7 @@ export const ProgressBar = styled.div`
   right: -1px;
 `;
 
-export const Toast = styled.div<ThemeOptions>`
+export const Toast = styled.div<AppThemeOptions>`
   display: flex;
   flex-direction: column;
   position: relative;
