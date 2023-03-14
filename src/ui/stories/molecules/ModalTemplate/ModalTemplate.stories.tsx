@@ -1,7 +1,6 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import { ModalTemplate, ModalTemplateProps } from '@/molecules';
-import { Input } from '@/atoms';
 import { InputFormLabel } from '@/organisms';
 
 export default {
