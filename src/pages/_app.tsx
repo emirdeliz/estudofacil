@@ -5,6 +5,7 @@ import type { AppProps } from 'next/app';
 import { Reset } from 'styled-reset';
 import { LoadingProvider } from '@/atoms';
 import GlobalStyle from './global.style';
+import '../../public/assets/fontello/css/fontello.css';
 import './_app.css';
 
 const App = ({ Component, pageProps }: AppProps) => {

@@ -1,4 +1,4 @@
-import { GenericObject, KeyValue } from 'types/common';
+import { GenericObject } from '@/types';
 
 export const convertObjectValuesToObjectValuesAsBoolean = <T>(
   object: Object

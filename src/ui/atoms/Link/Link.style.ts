@@ -6,6 +6,8 @@ import { LinkProps } from './Link';
 export const Link = styled(Title).attrs({
   as: 'a',
 })<LinkProps>`
+  display: flex;
+  align-items: center;
   color: ${(props) =>
     props.error ? props.theme.colors.Red : props.theme.colors.P2};
   font-size: ${({ fs0, fs1, fs2, fs3, fs4, fs5, fs6, theme }) => {

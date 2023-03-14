@@ -9,12 +9,15 @@ export interface IconOptions {
   calendar?: boolean;
   close?: boolean;
   check?: boolean;
+  desktop?: boolean;
   down?: boolean;
   download?: boolean;
   downOpen?: boolean;
   email?: boolean;
+  gamepad?: boolean;
   leftOpen?: boolean;
   maintenance?: boolean;
+  menu?: boolean;
   pdfDouble?: boolean;
   power?: boolean;
   rightOpen?: boolean;
@@ -24,6 +27,8 @@ export interface IconOptions {
   up?: boolean;
   upload?: boolean;
   upOpen?: boolean;
+  user?: boolean;
+  users?: boolean;
 }
 
 export interface IconProps extends IconOptions, ColorsProps {
@@ -49,11 +54,14 @@ const getIcon = ({
   calendar,
   close,
   check,
+  desktop,
   down,
   download,
   downOpen,
   email,
+  gamepad,
   maintenance,
+  menu,
   power,
   leftOpen,
   infoCircle,
@@ -66,6 +74,8 @@ const getIcon = ({
   upOpen,
   up,
   transactions,
+  user,
+  users,
 }: IconProps) => {
   switch (true) {
     case alert:
@@ -82,6 +92,8 @@ const getIcon = ({
       return 'close';
     case check:
       return 'check';
+    case desktop:
+      return 'desktop';
     case down:
       return 'down';
     case download:
@@ -90,12 +102,16 @@ const getIcon = ({
       return 'down-open';
     case email:
       return 'email';
+    case gamepad:
+      return 'gamepad';
     case leftOpen:
       return 'left-open';
     case infoCircle:
       return 'info-circle';
     case maintenance:
       return 'maintenance';
+    case menu:
+      return 'menu';
     case pdfDouble:
       return 'pdf-double';
     case power:
@@ -116,6 +132,10 @@ const getIcon = ({
       return 'up';
     case upOpen:
       return 'up-open';
+    case user:
+      return 'user';
+    case users:
+      return 'users';
   }
   return 'power';
 };
@@ -132,13 +152,16 @@ Icon.Barcode = (props: IconProps) => <Icon {...props} barcode />;
 Icon.Calendar = (props: IconProps) => <Icon {...props} calendar />;
 Icon.Close = (props: IconProps) => <Icon {...props} close />;
 Icon.Check = (props: IconProps) => <Icon {...props} check />;
+Icon.Desktop = (props: IconProps) => <Icon {...props} desktop />;
 Icon.Down = (props: IconProps) => <Icon {...props} upOpen />;
 Icon.Download = (props: IconProps) => <Icon {...props} download />;
 Icon.DownOpen = (props: IconProps) => <Icon {...props} downOpen />;
 Icon.Email = (props: IconProps) => <Icon {...props} email />;
+Icon.Gamepad = (props: IconProps) => <Icon {...props} gamepad />;
 Icon.LeftOpen = (props: IconProps) => <Icon {...props} leftOpen />;
 Icon.InfoCircle = (props: IconProps) => <Icon {...props} infoCircle />;
 Icon.Maintenance = (props: IconProps) => <Icon {...props} maintenance />;
+Icon.Menu = (props: IconProps) => <Icon {...props} menu />;
 Icon.PdfDouble = (props: IconProps) => <Icon {...props} pdfDouble />;
 Icon.Power = (props: IconProps) => <Icon {...props} power />;
 Icon.RightOpen = (props: IconProps) => <Icon {...props} rightOpen />;
@@ -149,3 +172,5 @@ Icon.Upload = (props: IconProps) => <Icon {...props} upload />;
 Icon.Up = (props: IconProps) => <Icon {...props} upload />;
 Icon.UpOpen = (props: IconProps) => <Icon {...props} upOpen />;
 Icon.Transactions = (props: IconProps) => <Icon {...props} transactions />;
+Icon.User = (props: IconProps) => <Icon {...props} user />;
+Icon.Users = (props: IconProps) => <Icon {...props} users />;

@@ -15,9 +15,9 @@ const animation = css<IconProps>`
 `;
 
 export enum FontSize {
-  Xs = '8px',
-  Sm = '12px',
-  Nm = '16px',
+  Xs = '12px',
+  Sm = '20px',
+  Nm = '30px',
 }
 
 export enum FontSizeCircled {

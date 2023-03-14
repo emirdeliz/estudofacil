@@ -11,25 +11,27 @@ const HomePage = () => {
       <AstronautStyle>
         <Image src="/astronauta.png" alt="Astronauta" fill />
       </AstronautStyle>
-      <Row mt-4>
-        <Col.C4 tablet="4" mob-l="12">
+      <Row>
+        <Col.C4 tablet="4" mobilel="12">
           <Card
+            desktop
             title={t('home-page-learn-to-learn')}
             subTitle={t('home-page-promote-autonomy')}
           />
         </Col.C4>
-        <Col.C4 tablet="4" mob-l="12">
+        <Col.C4 tablet="4" mobilel="12">
           <Card
+            users
             title={t('home-page-everyone-partnership')}
             subTitle={t('home-page-all-work')}
             user-group
           />
         </Col.C4>
-        <Col.C4 tablet="4" mob-l="12">
+        <Col.C4 tablet="4" mobilel="12">
           <Card
+            gamepad
             title={t('home-page-learning-is-fun')}
             subTitle={t('home-offer-resources-and-games')}
-            game-controller
           />
         </Col.C4>
       </Row>

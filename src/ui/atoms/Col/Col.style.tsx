@@ -158,10 +158,9 @@ export const Col = styled.div<ColProps>`
     }}
   }
 
-  flex: ${({ de }) => (de ? `0 0 ${ColSizeBase[`S${de}`]}%` : 'width: 100%')}
-    ${({ auto }) => {
-      if (auto) {
-        return `
+  ${({ auto, de }) => {
+    if (auto) {
+      return `
         -ms-flex-preferred-size: 0;
         flex-basis: 0;
         -webkit-box-flex: 1;
@@ -169,6 +168,8 @@ export const Col = styled.div<ColProps>`
         flex-grow: 1;
         max-width: 100%;
       `;
-      }
-    }};
+    } else {
+      return `0 0 ${ColSizeBase[`S${de || 12}`]}%`;
+    }
+  }};
 `;

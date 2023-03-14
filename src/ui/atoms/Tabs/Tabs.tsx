@@ -1,5 +1,4 @@
 import React from 'react';
-import { RoutePath } from 'routes';
 import { Flex } from '..';
 import * as S from './Tabs.style';
 
@@ -7,7 +6,6 @@ export interface TabItemProps {
   id: string;
   title: string;
   active: boolean;
-  route?: RoutePath;
 }
 
 export interface TabsProps {

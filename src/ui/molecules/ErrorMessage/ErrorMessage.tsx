@@ -1,11 +1,12 @@
 import React from 'react';
-
 import { ErrorMessageStyle } from './ErrorMessage.style';
-import { useError } from 'context/Hooks';
 
-export const ErrorMessage = () => {
-  const { error } = useError();
-  return <ErrorMessageStyle>{error.default}</ErrorMessageStyle>;
+interface ErrorMessageProps {
+  error: string;
+}
+
+export const ErrorMessage = ({ error }: ErrorMessageProps) => {
+  return <ErrorMessageStyle>{error}</ErrorMessageStyle>;
 };
 
 export default ErrorMessage;

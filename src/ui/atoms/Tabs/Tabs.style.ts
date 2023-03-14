@@ -1,4 +1,4 @@
-import Colors from 'common/colors';
+import { Colors } from '@/theme';
 import styled from 'styled-components';
 
 export const Tab = styled.button<{ active?: boolean }>`
@@ -14,7 +14,7 @@ export const Tab = styled.button<{ active?: boolean }>`
   height: 40px;
   padding: ${({ theme }) => theme.padding.Sm} ${({ theme }) => theme.padding.Md};
   border-bottom: 2px solid
-    ${({ active }) => (active ? Colors.primary : Colors.basicWhite)};
+    ${({ active }) => (active ? Colors.P1 : Colors.White)};
   cursor: pointer;
 `;
 
@@ -23,5 +23,5 @@ export const TabName = styled.p<{ selected?: boolean }>`
   font-size: ${({ theme }) => theme.fontSize.Xs};
   line-height: 21px;
   letter-spacing: 0em;
-  color: ${({ selected }) => (selected ? Colors.primary : Colors.neutralN1)};
+  color: ${({ selected }) => (selected ? Colors.P1 : Colors.N1)};
 `;

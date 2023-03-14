@@ -10,14 +10,14 @@ export interface CardProps extends IconOptions {
 export const Card = ({ title, subTitle, ...props }: CardProps) => {
   return (
     <S.Card>
-      <Flex.Col align-center>
+      <Flex.Col alignCenter mt3>
         <Icon {...props} orange />
-        {/* <Title.F fw-4 center mt-3 black>
+        <Title center mt3 black semibold>
           {title}
-        </Title.F>
-        <Title.Fs3 fw-1 center mt-3 lh-3>
+        </Title>
+        <Title center mt3 lh3>
           {subTitle}
-        </Title.Fs3> */}
+        </Title>
       </Flex.Col>
     </S.Card>
   );
