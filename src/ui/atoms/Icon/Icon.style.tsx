@@ -77,7 +77,6 @@ export const Icon = styled.i<IconProps>`
   justify-content: center;
   width: ${(props) => getSize(props)};
   height: ${({ circled, ...props }) => (circled ? getSize(props) : 'auto')};
-  padding: ${({ theme }) => theme.padding.Xs} 0;
   ${({ bordered, circled, theme, bgColor }) => {
     return `
       ${

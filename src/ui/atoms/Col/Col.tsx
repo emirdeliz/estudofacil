@@ -1,7 +1,7 @@
 import React, { memo, ReactNode } from 'react';
 import * as S from './Col.style';
 
-type ColSize =
+export type ColSize =
   | '1'
   | '2'
   | '3'

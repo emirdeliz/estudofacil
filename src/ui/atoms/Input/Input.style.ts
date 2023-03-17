@@ -54,24 +54,6 @@ export const Container = styled.div<InputProps>`
   border-radius: ${({ theme }) => theme.radius.Sm};
 `;
 
-export const IconContainer = styled.div`
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  height: 90%;
-  width: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: translateY(-50%);
-  user-select: none;
-`;
-
-export const GroupContainer = styled.div`
-  position: relative;
-  width: 100%;
-`;
-
 export const ReadOnly = styled.div`
   display: flex;
   align-items: center;

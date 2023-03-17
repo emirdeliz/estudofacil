@@ -261,33 +261,31 @@ export const Input = ({
   }
 
   let input = (
-    <S.GroupContainer>
-      <InputText
-        {...props}
-        id={id}
-        maxLength={maxLengthInput}
-        value={applyMaskMaybe(value, {
-          cpf,
-          cnpj,
-          phone,
-          barcode,
-          countryState,
-        })}
-        dataTestId={dataTestId}
-        onChange={(e) => {
-          const eventMask = { ...e };
-          if ((cpf || cnpj || phone || barcode) && eventMask.target) {
-            const valueMask = helpers.getNumbersOfString(e?.target.value);
-            eventMask.target.value = valueMask;
-          }
+    <InputText
+      {...props}
+      id={id}
+      maxLength={maxLengthInput}
+      value={applyMaskMaybe(value, {
+        cpf,
+        cnpj,
+        phone,
+        barcode,
+        countryState,
+      })}
+      dataTestId={dataTestId}
+      onChange={(e) => {
+        const eventMask = { ...e };
+        if ((cpf || cnpj || phone || barcode) && eventMask.target) {
+          const valueMask = helpers.getNumbersOfString(e?.target.value);
+          eventMask.target.value = valueMask;
+        }
 
-          onChange &&
-            onChange(
-              eventMask as ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-            );
-        }}
-      />
-    </S.GroupContainer>
+        onChange &&
+          onChange(
+            eventMask as ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+          );
+      }}
+    />
   );
   if (number) {
     input = (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Col, ColProps } from '@/atoms';
+import { Col, ColProps, ColSize, Row } from '@/atoms';
 import styled from 'styled-components';
 
 export default {
@@ -20,27 +20,27 @@ const Content = styled.div`
 `;
 
 const Template: Story<ColProps> = () => (
-  <Container>
+  <Col.C12>
     {[
-      'c1',
-      'c2',
-      'c3',
-      'c4',
-      'c5',
-      'c6',
-      'c7',
-      'c8',
-      'c9',
-      'c10',
-      'c11',
-      'c12',
+      '1',
+      '2',
+      '3',
+      '4',
+      '5',
+      '6',
+      '7',
+      '8',
+      '9',
+      '10',
+      '11',
+      '12',
       'auto',
     ].map((item) => (
-      <Col {...{ [item]: true }} key={item}>
+      <Col de={item as ColSize} key={item}>
         <Content>{item}</Content>
       </Col>
     ))}
-  </Container>
+  </Col.C12>
 );
 
 export const ColSimple = Template.bind({});

@@ -10,13 +10,13 @@ export default {
 const Template: Story<IconProps> = (args) => {
   return (
     <>
-      <Flex mb2 alignCenter justifyCenter>
+      <Flex alignCenter justifyCenter>
         <Icon {...args} xs />
       </Flex>
-      <Flex mb2 alignCenter justifyCenter>
+      <Flex alignCenter justifyCenter ml3>
         <Icon {...args} sm />
       </Flex>
-      <Flex alignCenter justifyCenter>
+      <Flex alignCenter justifyCenter ml3>
         <Icon {...args} nm />
       </Flex>
     </>

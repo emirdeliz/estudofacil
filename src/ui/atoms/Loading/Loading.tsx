@@ -29,12 +29,23 @@ export const Loading = ({ circle, global, center }: LoadingProps) => {
           <ThemeConsumer>
             {(theme) => <Overlay visible zIndex={theme.zIndex.Nm} />}
           </ThemeConsumer>
-          <S.Blink>
-            <S.SvgFull>
-              <S.RectFull />
-              <S.PathFull />
-            </S.SvgFull>
-          </S.Blink>
+          <S.SvgFull>
+            {[20, 30, 40].map((item, index) => {
+              return (
+                <S.RectFull x={item} key={item}>
+                  <animateTransform
+                    attributeType="xml"
+                    attributeName="transform"
+                    type="translate"
+                    values="0 0; 0 20; 0 0"
+                    begin={`0.${index * 2}s`}
+                    dur="0.6s"
+                    repeatCount="indefinite"
+                  />
+                </S.RectFull>
+              );
+            })}
+          </S.SvgFull>
         </>
       )}
     </S.Container>
