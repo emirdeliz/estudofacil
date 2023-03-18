@@ -29,7 +29,7 @@ export const IconSearch = styled(IconArrow)`
 
 const DROPDOWN_MENU_MAX_HEIGHT = '250px';
 
-const DROPDOWN_MENU_POSITION = '37px';
+const DROPDOWN_MENU_POSITION = '43px';
 
 interface MenuProps {
   menuTop?: boolean;

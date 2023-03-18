@@ -1,4 +1,3 @@
-import { centerAbsolute } from '@/theme';
 import styled from 'styled-components';
 
 interface RadioProps {
@@ -12,20 +11,28 @@ export const Radio = styled.div<RadioProps>`
   position: relative;
   width: ${RADIO_WIDTH};
   padding: ${({ theme }) => theme.padding.Sm};
-  border: solid 1px ${({ theme }) => theme.colors.DarkGreen};
+  border: solid 1px ${({ theme }) => theme.colors.P1};
   border-radius: ${({ theme }) => theme.radius.Nm};
-  ${({ theme, clickable }) => `
-    opacity: ${clickable !== false ? 1 : theme.opacity.Disable};
-    cursor: ${clickable !== false ? 'pointer' : 'not-allowed'};
+  ${({ theme, clickable, checked }) => `
+    opacity: ${clickable ? 1 : theme.opacity.Disable};
+    cursor: ${clickable ? 'pointer' : 'not-allowed'};
+    background-color: ${checked ? theme.colors.P1 : 'transparent'};
   `};
 
   &:before {
-    content: '  ';
-    transition: opacity 0.3s linear;
-    ${centerAbsolute};
-    padding: ${({ theme }) => theme.padding.Xs};
+    content: ' ';
+    transition: transform 0.2s linear;
+    padding: 7px;
     background-color: ${({ theme }) => theme.colors.DarkGreen};
     border-radius: ${({ theme }) => theme.radius.Nm};
-    opacity: ${({ checked }) => (checked ? 1 : 0)};
+    position: absolute;
+    top: 1px;
+
+    ${({ checked }) => {
+      // return checked ? 'left: 1px' : 'right: 1px';
+      return checked
+        ? `transform: translateX(${parseFloat(RADIO_WIDTH) - 7}px);`
+        : 'transform: translateX(-7px)';
+    }}
   }
 `;

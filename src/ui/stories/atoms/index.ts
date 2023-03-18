@@ -7,5 +7,4 @@ export * from './Loading/Loading.stories';
 export * from './Radio/Radio.stories';
 export * from './ProgressBar/ProgressBar.stories';
 export * from './Row/Row.stories';
-export * from './Slide/Slide.stories';
 export * from './Title/Title.stories';

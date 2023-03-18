@@ -14,7 +14,6 @@ export * from './Overlay/Overlay';
 export * from './ProgressBar/ProgressBar';
 export * from './Radio/Radio';
 export * from './Row/Row';
-export * from './Slide/Slide';
 export * from './Title/Title';
 export * from './Overflow/Overflow';
 export * from './PageContainer/PageContainer';
