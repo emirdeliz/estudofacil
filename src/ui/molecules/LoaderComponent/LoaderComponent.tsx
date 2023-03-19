@@ -24,10 +24,9 @@ export const LoaderComponent = <T extends GenericObject>({
   const Component = useMemo(
     () => lazy(children) as LazyExoticComponent<ComponentType>,
     [children]
-  ) as any;
-
+  ) as GenericObject;
   return (
-    <Suspense fallback={<Loading />}>
+    <Suspense fallback={<Loading.GlobalSimple />}>
       <Component {...props} />
     </Suspense>
   );

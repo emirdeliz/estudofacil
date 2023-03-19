@@ -29,23 +29,7 @@ export const Loading = ({ circle, global, center }: LoadingProps) => {
           <ThemeConsumer>
             {(theme) => <Overlay visible zIndex={theme.zIndex.Nm} />}
           </ThemeConsumer>
-          <S.SvgFull>
-            {[20, 30, 40].map((item, index) => {
-              return (
-                <S.RectFull x={item} key={item}>
-                  <animateTransform
-                    attributeType="xml"
-                    attributeName="transform"
-                    type="translate"
-                    values="0 0; 0 20; 0 0"
-                    begin={`0.${index * 2}s`}
-                    dur="0.6s"
-                    repeatCount="indefinite"
-                  />
-                </S.RectFull>
-              );
-            })}
-          </S.SvgFull>
+          <Loading.GlobalSimple />
         </>
       )}
     </S.Container>
@@ -55,5 +39,25 @@ export const Loading = ({ circle, global, center }: LoadingProps) => {
 Loading.Global = (props: LoadingProps) => <Loading {...props} global />;
 
 Loading.Circle = (props: LoadingProps) => <Loading {...props} circle />;
+
+Loading.GlobalSimple = () => (
+  <S.SvgFull>
+    {[20, 30, 40].map((item, index) => {
+      return (
+        <S.RectFull x={item} key={item}>
+          <animateTransform
+            attributeType="xml"
+            attributeName="transform"
+            type="translate"
+            values="0 0; 0 20; 0 0"
+            begin={`0.${index * 2}s`}
+            dur="0.6s"
+            repeatCount="indefinite"
+          />
+        </S.RectFull>
+      );
+    })}
+  </S.SvgFull>
+);
 
 export { LoadingContext, LoadingProvider, useLoading };

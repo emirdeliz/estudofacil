@@ -67,6 +67,8 @@ export const Dropdown = <T extends GenericObject>({
   );
   const id = String(props.id);
 
+  console.log({ selectedItem });
+
   if (readOnly) {
     return (
       <S.ReadOnly>

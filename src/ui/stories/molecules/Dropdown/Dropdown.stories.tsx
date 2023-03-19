@@ -23,7 +23,7 @@ const Template: Story<GenericObject> = <T extends GenericObject>({
   value: initialValue,
   ...args
 }: DropdownProps<T>) => {
-  const [value, setValue] = useState<T | undefined>();
+  const [value, setValue] = useState<T | undefined>(initialValue);
   return (
     <Dropdown<T> {...args} value={value} onChange={(v: T) => setValue(v)} />
   );
