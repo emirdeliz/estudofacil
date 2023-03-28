@@ -34,7 +34,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# tailwind
-.turbo
-.vscode
-styles/dist.css
+# history
+.history
