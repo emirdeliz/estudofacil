@@ -1,3 +1,4 @@
+import { MarginProps, PaddingProps } from '@theme';
 import React, { memo, ReactNode } from 'react';
 import * as S from './Col.style';
 
@@ -15,7 +16,7 @@ export type ColSize =
   | '11'
   | '12';
 
-export interface ColProps {
+export interface ColProps extends MarginProps, PaddingProps {
   de?: ColSize;
   mobiles?: ColSize;
   mobilem?: ColSize;

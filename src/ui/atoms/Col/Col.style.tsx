@@ -1,3 +1,4 @@
+import { buildMargin, buildPadding } from '@theme';
 import styled from 'styled-components';
 import { ColProps } from './Col';
 
@@ -166,4 +167,6 @@ export const Col = styled.div<ColProps>`
       return de ? `flex: 0 0 ${ColSizeBase[`S${de}`]}%` : '';
     }
   }};
+  ${buildMargin()}
+  ${buildPadding()}
 `;

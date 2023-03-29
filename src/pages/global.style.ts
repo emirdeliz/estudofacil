@@ -13,6 +13,10 @@ const Global = createGlobalStyle`
   body {
     min-width: ${BODY_MIN_WIDTH};
   }
+
+  b {
+    font-weight: bold;
+  }
 `;
 
 export default Global;
