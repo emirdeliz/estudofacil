@@ -35,4 +35,5 @@ export * from './padding';
 export * from './radius';
 export * from './shadow';
 export * from './z-index';
+export * from './size';
 export * from './theme';

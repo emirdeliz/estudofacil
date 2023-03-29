@@ -12,14 +12,14 @@ const HomePage = () => {
         <Image src="/astronauta.png" alt="Astronauta" fill />
       </AstronautStyle>
       <Row>
-        <Col.C4 tablet="4" mobilel="12">
+        <Col.C4 mobilel="12">
           <Card
             desktop
             title={t('home-page-learn-to-learn')}
             subTitle={t('home-page-promote-autonomy')}
           />
         </Col.C4>
-        <Col.C4 tablet="4" mobilel="12">
+        <Col.C4 mobilel="12">
           <Card
             users
             title={t('home-page-everyone-partnership')}
@@ -27,7 +27,7 @@ const HomePage = () => {
             user-group
           />
         </Col.C4>
-        <Col.C4 tablet="4" mobilel="12">
+        <Col.C4 mobilel="12">
           <Card
             gamepad
             title={t('home-page-learning-is-fun')}

@@ -115,46 +115,40 @@ const ColQuerySize = {
 export const Col = styled.div<ColProps>`
   min-height: 1px;
 
-  @media only screen and (min-width: ${breakpoints.MobileS}) {
-    ${({ mobiles: sizeBase, de }) => {
-      const size = sizeBase ? ColQuerySize.Tablet[`C${sizeBase}`] : undefined;
-      const sizeDe = de ? ColSizeBase[`S${de}`] : undefined;
-      return `flex: 0 0 ${size || sizeDe}%; max-width: ${size || sizeDe}%;`;
+  @media only screen and (max-width: ${breakpoints.MobileS}) {
+    ${({ mobiles }) => {
+      const size = mobiles ? ColQuerySize.Tablet[`C${mobiles}`] : undefined;
+      return size ? `flex: 0 0 ${size}%; max-width: ${size}%;` : '';
     }}
   }
-  @media only screen and (min-width: ${breakpoints.MobileM}) {
-    ${({ mobilem: sizeBase, de }) => {
-      const size = sizeBase ? ColQuerySize.Tablet[`C${sizeBase}`] : undefined;
-      const sizeDe = de ? ColSizeBase[`S${de}`] : undefined;
-      return `flex: 0 0 ${size || sizeDe}%; max-width: ${size || sizeDe}%;`;
+  @media only screen and (max-width: ${breakpoints.MobileM}) {
+    ${({ mobilem }) => {
+      const size = mobilem ? ColQuerySize.Tablet[`C${mobilem}`] : undefined;
+      return size ? `flex: 0 0 ${size}%; max-width: ${size}%;` : '';
     }}
   }
-  @media only screen and (min-width: ${breakpoints.MobileL}) {
-    ${({ mobilel: sizeBase, de }) => {
-      const size = sizeBase ? ColQuerySize.Tablet[`C${sizeBase}`] : undefined;
-      const sizeDe = de ? ColSizeBase[`S${de}`] : undefined;
-      return `flex: 0 0 ${size || sizeDe}%; max-width: ${size || sizeDe}%;`;
+  @media only screen and (max-width: ${breakpoints.MobileL}) {
+    ${({ mobilel }) => {
+      const size = mobilel ? ColQuerySize.Tablet[`C${mobilel}`] : undefined;
+      return size ? `flex: 0 0 ${size}%; max-width: ${size}%;` : '';
     }}
   }
-  @media only screen and (min-width: ${breakpoints.Tablet}) {
-    ${({ tablet: sizeBase, de }) => {
-      const size = sizeBase ? ColQuerySize.Tablet[`C${sizeBase}`] : undefined;
-      const sizeDe = de ? ColSizeBase[`S${de}`] : undefined;
-      return `flex: 0 0 ${size || sizeDe}%; max-width: ${size || sizeDe}%;`;
+  @media only screen and (max-width: ${breakpoints.Tablet}) {
+    ${({ tablet }) => {
+      const size = tablet ? ColQuerySize.Tablet[`C${tablet}`] : undefined;
+      return size ? `flex: 0 0 ${size}%; max-width: ${size}%;` : '';
     }}
   }
-  @media only screen and (min-width: ${breakpoints.Laptop}) {
-    ${({ laptop: sizeBase, de }) => {
-      const size = sizeBase ? ColQuerySize.Tablet[`C${sizeBase}`] : undefined;
-      const sizeDe = de ? ColSizeBase[`S${de}`] : undefined;
-      return `flex: 0 0 ${size || sizeDe}%; max-width: ${size || sizeDe}%;`;
+  @media only screen and (max-width: ${breakpoints.Laptop}) {
+    ${({ laptop }) => {
+      const size = laptop ? ColQuerySize.Tablet[`C${laptop}`] : undefined;
+      return size ? `flex: 0 0 ${size}%; max-width: ${size}%;` : '';
     }}
   }
-  @media only screen and (min-width: ${breakpoints.Desktop}) {
-    ${({ desktop: sizeBase, de }) => {
-      const size = sizeBase ? ColQuerySize.Tablet[`C${sizeBase}`] : undefined;
-      const sizeDe = de ? ColSizeBase[`S${de}`] : undefined;
-      return `flex: 0 0 ${size || sizeDe}%; max-width: ${size || sizeDe}%;`;
+  @media only screen and (max-width: ${breakpoints.Desktop}) {
+    ${({ desktop }) => {
+      const size = desktop ? ColQuerySize.Tablet[`C${desktop}`] : undefined;
+      return size ? `flex: 0 0 ${size}%; max-width: ${size}%;` : '';
     }}
   }
 
@@ -169,7 +163,7 @@ export const Col = styled.div<ColProps>`
         max-width: 100%;
       `;
     } else {
-      return `flex: 0 0 ${ColSizeBase[`S${de || 12}`]}%`;
+      return de ? `flex: 0 0 ${ColSizeBase[`S${de}`]}%` : '';
     }
   }};
 `;
