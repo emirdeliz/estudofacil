@@ -27,9 +27,11 @@ const markdownParser = (text?: string) => {
 
 export const Markdown = memo(({ children, ...props }: MarkdownProps) => {
   return (
-    <S.P
-      {...props}
-      dangerouslySetInnerHTML={{ __html: markdownParser(children) }}
-    />
+    <S.Markdown {...props}>
+      <S.P
+        {...props}
+        dangerouslySetInnerHTML={{ __html: markdownParser(children) }}
+      />
+    </S.Markdown>
   );
 });

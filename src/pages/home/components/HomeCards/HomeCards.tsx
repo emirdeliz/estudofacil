@@ -3,7 +3,7 @@ import { Col, Row } from '@atoms';
 import { Card } from '@templates';
 import { t } from '@i18n';
 
-export const HomeCards = memo(() => {
+const HomeCards = memo(() => {
   return (
     <Row mt7 mb7>
       <Col.C4 mobilel="12">
@@ -31,3 +31,5 @@ export const HomeCards = memo(() => {
     </Row>
   );
 });
+
+export default HomeCards;

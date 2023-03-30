@@ -1,5 +1,6 @@
-export { HomeSectionTitle } from './HomeSectionTitle/HomeSectionTitle';
-export { HomeSectionSubTitle } from './HomeSectionSubTitle/HomeSectionSubTitle';
-export { HomeCards } from './HomeCards/HomeCards';
-export { HomeAcropolis } from './HomeAcropolis/HomeAcropolis';
-export { HomeSubjects } from './HomeSubjects/HomeSubjects';
+export { default as HomeSectionTitle } from './HomeSectionTitle/HomeSectionTitle';
+export { default as HomeSectionSubTitle } from './HomeSectionSubTitle/HomeSectionSubTitle';
+export { default as HomeCards } from './HomeCards/HomeCards';
+export { default as HomeEasyStudyTeachers } from './HomeEasyStudyTeachers/HomeEasyStudyTeachers';
+export { default as HomeAcropolis } from './HomeAcropolis/HomeAcropolis';
+export { default as HomeSubjects } from './HomeSubjects/HomeSubjects';

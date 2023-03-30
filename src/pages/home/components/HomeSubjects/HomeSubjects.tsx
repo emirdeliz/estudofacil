@@ -1,7 +1,7 @@
 import { Col, Flex, Image, Row, Title } from '@atoms';
 import { t } from '@i18n';
-import { HomeSectionSubTitle } from '../HomeSectionSubTitle/HomeSectionSubTitle';
-import { HomeSectionTitle } from '../HomeSectionTitle/HomeSectionTitle';
+import HomeSectionSubTitle from '../HomeSectionSubTitle/HomeSectionSubTitle';
+import HomeSectionTitle from '../HomeSectionTitle/HomeSectionTitle';
 import * as S from './HomeSubjects.style';
 
 interface SubjectProps {
@@ -11,7 +11,7 @@ interface SubjectProps {
 
 const Subject = ({ imageUrl, children }: SubjectProps) => {
   return (
-    <Col.C2 ml3 mb3>
+    <Col.C2 mr3 mb3 tablet="12">
       <S.HomeSubjectsImage>
         <Image alt={children} src={imageUrl} />
       </S.HomeSubjectsImage>
@@ -20,7 +20,7 @@ const Subject = ({ imageUrl, children }: SubjectProps) => {
   );
 };
 
-export const HomeSubjects = () => {
+const HomeSubjects = () => {
   return (
     <Flex mt5 mb3 pl5 pr5 pt5 pb5>
       <HomeSectionTitle>{t('subjects')}</HomeSectionTitle>
@@ -42,3 +42,5 @@ export const HomeSubjects = () => {
     </Flex>
   );
 };
+
+export default HomeSubjects;

@@ -5,10 +5,12 @@ interface HomeSectionSubTitleProps {
   children: ReactNode;
 }
 
-export const HomeSectionSubTitle = ({ children }: HomeSectionSubTitleProps) => {
+const HomeSectionSubTitle = ({ children }: HomeSectionSubTitleProps) => {
   return (
     <Title fs2 mb3>
       {children}
     </Title>
   );
 };
+
+export default HomeSectionSubTitle;

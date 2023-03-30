@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
-export const Image = styled.div`
+export const Container = styled.div`
   width: 100%;
+  height: auto;
+`;
 
-  img {
-    width: 100%;
-    position: relative !important;
-    height: auto !important;
-  }
+export const Image = styled.img`
+  object-fit: contain;
+  width: 100%;
+  height: auto;
 `;

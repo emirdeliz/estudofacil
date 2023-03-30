@@ -4,6 +4,7 @@ export * from './Dot/Dot';
 export * from './Fade/Fade';
 export * from './Flex/Flex';
 export * from './FloatingElement/FloatingElement';
+export * from './FormControl/FormControl';
 export * from './Icon/Icon';
 export * from './Image/Image';
 export * from './Input/Input';

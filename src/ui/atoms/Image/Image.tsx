@@ -1,16 +1,15 @@
-import NextImage from 'next/image';
 import * as S from './Image.style';
 
-interface ImageProps {
+export interface ImageProps {
   src: string;
   alt: string;
 }
 
-export const Image = ({ src, alt }: ImageProps) => {
+export const Image = (props: ImageProps) => {
   return (
-    <S.Image>
-      <NextImage src={src} alt={alt} fill />
-    </S.Image>
+    <S.Container>
+      <S.Image {...props} />
+    </S.Container>
   );
 };
 

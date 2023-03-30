@@ -1,7 +1,11 @@
-import { Banner, Card } from '@templates';
+import { Banner, Footer } from '@templates';
 import { Flex, Image } from '@atoms';
-import { HomeAcropolis } from './components/HomeAcropolis/HomeAcropolis';
-import { HomeCards, HomeSubjects } from './components';
+import {
+  HomeAcropolis,
+  HomeCards,
+  HomeEasyStudyTeachers,
+  HomeSubjects,
+} from './components';
 
 const HomePage = () => {
   return (
@@ -11,6 +15,8 @@ const HomePage = () => {
       <HomeCards />
       <HomeAcropolis />
       <HomeSubjects />
+      <HomeEasyStudyTeachers />
+      <Footer />
     </Flex.Col>
   );
 };
