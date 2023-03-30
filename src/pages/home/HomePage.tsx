@@ -5,7 +5,7 @@ import {
   HomeCards,
   HomeEasyStudyTeachers,
   HomeSubjects,
-} from './components';
+} from '@components';
 
 const HomePage = () => {
   return (
