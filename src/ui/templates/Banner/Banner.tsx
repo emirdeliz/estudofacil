@@ -1,10 +1,8 @@
-import { memo, useState } from 'react';
-import { Flex, Hr, Icon, Link, Title } from '@atoms';
+import { Flex, Icon, Link, Title } from '@atoms';
 import { Logo } from '../Logo/Logo';
 import * as S from './Banner.style';
 import { t } from '@i18n';
-import { Form, FormGroup, InputForm, Modal, useModal } from '@molecules';
-import { InputFormLabel } from '@organisms';
+import { Form, InputForm, Modal, useModal } from '@molecules';
 
 export const Banner = () => {
   const { setShowModal } = useModal();
