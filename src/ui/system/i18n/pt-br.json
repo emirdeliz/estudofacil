@@ -17,5 +17,12 @@
 	"portuguese-language": "Língua Portuguesa",
 	"english-language": "Língua Inglesa",
 	"sciences": "Ciências",
-	"enter": "Entrar"
+	"enter": "Entrar",
+	"purchase": "Comprar",
+	"name": "Nome",
+	"password": "Senha",
+	"confirm": "Confirmar",
+	"close": "Fechar",
+	"email": "E-mail",
+	"new-register": "Novo Cadastro"
 }

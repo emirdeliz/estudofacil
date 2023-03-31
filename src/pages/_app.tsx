@@ -6,6 +6,7 @@ import { Reset } from 'styled-reset';
 import { LoadingProvider } from '@atoms';
 import GlobalStyle from './global.style';
 import './_app.css';
+import { ModalGlobal, ModalProvider } from '@molecules';
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
@@ -26,7 +27,10 @@ const App = ({ Component, pageProps }: AppProps) => {
       <GlobalStyle />
       <ThemeProvider theme={theme}>
         <LoadingProvider>
-          <Component {...pageProps} />
+          <ModalProvider>
+            <ModalGlobal />
+            <Component {...pageProps} />
+          </ModalProvider>
         </LoadingProvider>
       </ThemeProvider>
     </main>

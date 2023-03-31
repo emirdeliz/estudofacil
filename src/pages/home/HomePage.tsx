@@ -11,7 +11,7 @@ const HomePage = () => {
   return (
     <Flex.Col wFull hFull>
       <Banner />
-      <Image src="/astronauta.png" alt="Astronauta" />
+      <Image src="/flower.png" alt="Astronauta" />
       <HomeCards />
       <HomeAcropolis />
       <HomeSubjects />

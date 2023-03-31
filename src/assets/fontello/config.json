@@ -147,7 +147,7 @@
     {
       "uid": "9f7e544943cca22c71e3651abe95f7e3",
       "css": "pdf-double",
-      "code": 59228,
+      "code": 59406,
       "src": "custom_icons",
       "selected": true,
       "svg": {
@@ -179,7 +179,7 @@
     {
       "uid": "2e6349b4ad241ce3fd89d12516798bc0",
       "css": "upload",
-      "code": 59406,
+      "code": 59407,
       "src": "custom_icons",
       "selected": true,
       "svg": {
@@ -193,7 +193,7 @@
     {
       "uid": "0233292a93b39ca2dbdc45bbc7963e80",
       "css": "calendar",
-      "code": 59407,
+      "code": 59408,
       "src": "custom_icons",
       "selected": true,
       "svg": {
@@ -207,7 +207,7 @@
     {
       "uid": "8c01bdf6f1f145a10f234f08cb0a9d72",
       "css": "up",
-      "code": 59408,
+      "code": 59409,
       "src": "custom_icons",
       "selected": true,
       "svg": {
@@ -221,7 +221,7 @@
     {
       "uid": "c0313baba22a04900e262ae2c6bbf717",
       "css": "down",
-      "code": 59409,
+      "code": 59410,
       "src": "custom_icons",
       "selected": true,
       "svg": {
@@ -235,7 +235,7 @@
     {
       "uid": "e9308e27676404e4b796293333889c0b",
       "css": "download",
-      "code": 59410,
+      "code": 59411,
       "src": "custom_icons",
       "selected": true,
       "svg": {
@@ -291,7 +291,7 @@
     {
       "uid": "ddb3d74eec44f976c9938f11ad65945f",
       "css": "barcode",
-      "code": 59411,
+      "code": 59417,
       "src": "custom_icons",
       "selected": true,
       "svg": {
@@ -330,6 +330,12 @@
       "uid": "8b80d36d4ef43889db10bc1f0dc9a862",
       "css": "user",
       "code": 59416,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "93c35534e6b079466c4676cdedcdb7c1",
+      "css": "cart-arrow-down",
+      "code": 61976,
       "src": "fontawesome"
     }
   ]

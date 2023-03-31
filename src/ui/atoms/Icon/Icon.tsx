@@ -7,6 +7,7 @@ export interface IconOptions {
   arrowBack?: boolean;
   bank?: boolean;
   calendar?: boolean;
+  cartArrowDown?: boolean;
   close?: boolean;
   check?: boolean;
   desktop?: boolean;
@@ -52,6 +53,7 @@ const getIcon = ({
   bank,
   barcode,
   calendar,
+  cartArrowDown,
   close,
   check,
   desktop,
@@ -88,6 +90,8 @@ const getIcon = ({
       return 'barcode';
     case calendar:
       return 'calendar';
+    case cartArrowDown:
+      return 'cart-arrow-down';
     case close:
       return 'close';
     case check:
@@ -150,6 +154,7 @@ Icon.ArrowBack = (props: IconProps) => <Icon {...props} arrowBack />;
 Icon.Bank = (props: IconProps) => <Icon {...props} bank />;
 Icon.Barcode = (props: IconProps) => <Icon {...props} barcode />;
 Icon.Calendar = (props: IconProps) => <Icon {...props} calendar />;
+Icon.CartArrowDown = (props: IconProps) => <Icon {...props} cartArrowDown />;
 Icon.Close = (props: IconProps) => <Icon {...props} close />;
 Icon.Check = (props: IconProps) => <Icon {...props} check />;
 Icon.Desktop = (props: IconProps) => <Icon {...props} desktop />;

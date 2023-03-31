@@ -3,8 +3,8 @@ import styled, { DefaultTheme, css } from 'styled-components';
 import { ModalProps } from './Modal';
 
 const ContainerModifier = {
-  maxWidth: (maxHeight: string) => css`
-    max-width: ${maxHeight};
+  maxWidth: (maxWidth: string) => css`
+    max-width: ${maxWidth};
   `,
   maxHeight: (maxHeight: string) => css`
     max-height: ${maxHeight};
@@ -29,8 +29,8 @@ const ContainerModifier = {
 };
 
 export const Modal = styled.div<ModalProps>`
-  max-width: 100%;
-  max-height: 100%;
+  ${({ maxWidth }) => maxWidth && ContainerModifier.maxWidth(maxWidth)}
+  ${({ maxHeight }) => maxHeight && ContainerModifier.maxHeight(maxHeight)}
   height: ${({ height }) => height || 'auto'};
   z-index: ${({ theme, zIndex }) => zIndex || theme.zIndex.Sm};
   border-radius: ${({ theme }) => theme.radius.Nm};
@@ -48,8 +48,6 @@ export const Content = styled.div<ModalProps>`
     justify-content: center;
     position: relative;
     ${!ignorePadding && ContainerModifier.ignorePadding(theme, confirm)}
-    ${maxWidth && ContainerModifier.maxWidth(maxWidth)}
-    ${maxHeight && ContainerModifier.maxHeight(maxHeight)}
     ${height && ContainerModifier.height(height)}
   `}
 `;

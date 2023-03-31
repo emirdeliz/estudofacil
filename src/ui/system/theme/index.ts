@@ -8,6 +8,7 @@ import { Opacity } from './opacity';
 import { Radius } from './radius';
 import { Padding } from './padding';
 import { Margin } from './margin';
+import { Shadow } from './shadow';
 import { ZIndex } from './z-index';
 
 export const AppTheme = {
@@ -21,6 +22,7 @@ export const AppTheme = {
   zIndex: ZIndex,
   margin: Margin,
   padding: Padding,
+  shadow: Shadow,
 } as DefaultTheme;
 
 export * from './colors';

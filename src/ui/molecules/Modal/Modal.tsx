@@ -1,7 +1,12 @@
 import { Button, Fade, Flex, Link, Overlay } from '@atoms';
 import { ZIndex } from '@theme';
-import React, { ReactNode } from 'react';
-import { createPortal } from 'react-dom';
+import { t } from '@i18n';
+import React, { ReactNode, useEffect } from 'react';
+import {
+  Context as ModalContext,
+  Provider as ModalProvider,
+} from './context/ModalContext';
+import { useModal } from './hooks/useModal';
 import * as S from './Modal.style';
 
 export interface ModalProps {
@@ -25,10 +30,8 @@ export interface ModalProps {
 
 export const Modal = ({
   children,
-  visible,
   confirm,
-  confirmButtonLabel = 'Confirmar',
-  overlay,
+  confirmButtonLabel = t('confirm'),
   transparent,
   headerLeftIcon,
   enableButton = true,
@@ -36,48 +39,48 @@ export const Modal = ({
   onConfirm,
   ...props
 }: ModalProps) => {
-  if (!visible) {
-    return null;
-  }
-
-  const content = createPortal(
-    <S.Modal {...props} transparent={transparent}>
-      <Fade>
-        <S.Content {...props} confirm={confirm}>
-          {headerLeftIcon && (
-            <S.HeaderLeftIcon>{headerLeftIcon}</S.HeaderLeftIcon>
+  const { setModalContent } = useModal();
+  useEffect(() => {
+    setModalContent(
+      <S.Modal {...props} transparent={transparent}>
+        <Fade>
+          <S.Content {...props} confirm={confirm}>
+            {headerLeftIcon && (
+              <S.HeaderLeftIcon>{headerLeftIcon}</S.HeaderLeftIcon>
+            )}
+            {onClose && (
+              <S.Close>
+                <Link.Icon
+                  xs
+                  close
+                  black={!transparent}
+                  white={transparent}
+                  data-testid="icon-close-modal"
+                  onClick={onClose}
+                />
+              </S.Close>
+            )}
+            {children}
+          </S.Content>
+          {confirm && (
+            <S.ButtonContainer>
+              <Flex alignCenter>
+                <Button nm onClick={onConfirm} clickable={enableButton}>
+                  {confirmButtonLabel}
+                </Button>
+              </Flex>
+            </S.ButtonContainer>
           )}
-          {onClose && (
-            <S.Close>
-              <Link.Icon
-                xs
-                close
-                black={!transparent}
-                white={transparent}
-                data-testid="icon-close-modal"
-                onClick={onClose}
-              />
-            </S.Close>
-          )}
-          {children}
-        </S.Content>
-        {confirm && (
-          <S.ButtonContainer>
-            <Flex alignCenter>
-              <Button nm onClick={onConfirm} clickable={enableButton}>
-                {confirmButtonLabel}
-              </Button>
-            </Flex>
-          </S.ButtonContainer>
-        )}
-      </Fade>
-    </S.Modal>,
-    document.body
-  );
-
-  return overlay ? <Overlay visible>{content}</Overlay> : content;
+        </Fade>
+      </S.Modal>,
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  return <></>;
 };
 
 Modal.Overlay = (props: ModalProps) => <Modal {...props} overlay />;
 
 Modal.Confirm = (props: ModalProps) => <Modal {...props} confirm />;
+
+export { ModalContext, ModalProvider, useModal };
