@@ -10,7 +10,8 @@
     "test": "jest --watchAll",
     "test:ci": "jest --ci",
     "jest:clear:cache": "jest --clearCache",
-    "storybook": "yarn && start-storybook -p 6006"
+    "storybook": "yarn && start-storybook -p 6006",
+    "prepare:ia:commit:message": "oc"
   },
   "prettier": {
     "arrowParens": "always",
@@ -47,6 +48,7 @@
     "jest-environment-jsdom": "^29.5.0",
     "jest-styled-components": "^7.1.1",
     "mocker-data-generator": "^2.12.0",
+    "opencommit": "1.1.36",
     "prettier": "^2.7.1",
     "storybook-addon-designs": "^6.3.1",
     "ts-jest": "29.0.5",

@@ -1,7 +1,6 @@
 import { Col, Flex, Image, Row, Title } from '@atoms';
 import { t } from '@i18n';
-import HomeSectionSubTitle from '../HomeSectionSubTitle/HomeSectionSubTitle';
-import HomeSectionTitle from '../HomeSectionTitle/HomeSectionTitle';
+import { SectionTitle, SectionSubTitle } from '@templates';
 import * as S from './HomeSubjects.style';
 
 interface SubjectProps {
@@ -23,8 +22,8 @@ const Subject = ({ imageUrl, children }: SubjectProps) => {
 const HomeSubjects = () => {
   return (
     <Flex mt5 mb3 pl5 pr5 pt5 pb5>
-      <HomeSectionTitle>{t('subjects')}</HomeSectionTitle>
-      <HomeSectionSubTitle>{t('home-page-here-you-found')}</HomeSectionSubTitle>
+      <SectionTitle>{t('subjects')}</SectionTitle>
+      <SectionSubTitle>{t('home-page-here-you-found')}</SectionSubTitle>
       <Row>
         <Subject imageUrl="/sciences.png">{`${t(
           'sciences',

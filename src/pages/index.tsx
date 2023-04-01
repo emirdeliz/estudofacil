@@ -1,11 +1,2 @@
-import HomePage from './home/HomePage';
-
-const Home = () => {
-  return (
-    <>
-      <HomePage />
-    </>
-  );
-};
-
-export default Home;
+import HomePage from './home';
+export default HomePage;

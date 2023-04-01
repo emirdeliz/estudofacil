@@ -1,16 +1,14 @@
 import { Title } from '@atoms';
 import { ReactNode } from 'react';
 
-interface HomeSectionSubTitleProps {
+interface SectionSubTitleProps {
   children: ReactNode;
 }
 
-const HomeSectionSubTitle = ({ children }: HomeSectionSubTitleProps) => {
+export const SectionSubTitle = ({ children }: SectionSubTitleProps) => {
   return (
     <Title fs2 mb3>
       {children}
     </Title>
   );
 };
-
-export default HomeSectionSubTitle;

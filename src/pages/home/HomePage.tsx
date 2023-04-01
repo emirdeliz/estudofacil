@@ -1,4 +1,3 @@
-import { Banner, Footer } from '@templates';
 import { Flex, Image } from '@atoms';
 import {
   HomeAcropolis,
@@ -9,14 +8,12 @@ import {
 
 const HomePage = () => {
   return (
-    <Flex.Col wFull hFull>
-      <Banner />
+    <Flex.Col>
       <Image src="/flower.png" alt="Astronauta" />
       <HomeCards />
       <HomeAcropolis />
       <HomeSubjects />
       <HomeEasyStudyTeachers />
-      <Footer />
     </Flex.Col>
   );
 };
